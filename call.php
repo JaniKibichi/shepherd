@@ -1,15 +1,14 @@
 <?php
 require_once('AfricasTalkingGateway.php');
+require_once('config.php');
 
-$username   = "WeloveNerds";
-$apikey     = "34916511ccfe864b9aed8cb41758c5c87638daf3867148dea6c951a38e2ff126";
 
 $from = "+2348139840101";//254711082880
 //call to db
 $to   = "+2347056582918,+2347069371509";
 
 // Create a new instance of our awesome gateway class
-$gateway = new AfricasTalkingGateway($username, $apikey);
+$gateway = new AfricasTalkingGateway($userName, $apiKey);
 
 try 
 {
