@@ -5,7 +5,7 @@ require_once('config.php');
 
 $from = "+2348139840101";//254711082880
 //call to db
-$to   = "+2347056582918,+2347069371509";
+$to   = $phoneNg1,$phoneNg2;
 
 // Create a new instance of our awesome gateway class
 $gateway = new AfricasTalkingGateway($userName, $apiKey);

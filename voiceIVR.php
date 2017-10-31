@@ -12,17 +12,16 @@ $durationInSeconds  = $_POST['durationInSeconds'];
 $currencyCode  = $_POST['currencyCode'];
 $amount  = $_POST['amount'];
 
-//PARAMS
+//params
 require_once('AfricasTalkingGateway.php');
-$username   = "WeloveNerds";
-$apikey     = "34916511ccfe864b9aed8cb41758c5c87638daf3867148dea6c951a38e2ff126";
-$from = "+2348139840101";
+require_once('config.php');
 
+//set from number
+$from = "+2348139840101";
 //call to db
 $to   = "+2347056582918,+2347069371509";
 // Create a new instance of our awesome gateway class
-$gateway = new AfricasTalkingGateway($username, $apikey);
-
+$gateway = new AfricasTalkingGateway($userName, $apiKey);
 
 switch($dtmfDigits){
     case "0":
@@ -55,7 +54,7 @@ switch($dtmfDigits){
         // Talk listen again... Compose the response
         $response  = '<?xml version="1.0" encoding="UTF-8"?>';
         $response .= '<Response>';
-        $response .= '<Redirect>http://173.212.225.164:8010/voice/pick.php</Redirect>';
+        $response .= '<Redirect>http://173.212.225.164:8010/voice/voicePick.php</Redirect>';
         $response .= '</Response>';
 
         // Print the response onto the page so that our gateway can read it

@@ -18,7 +18,7 @@ if ($isActive == 1)  {
       // Compose the response
       $response  = '<?xml version="1.0" encoding="UTF-8"?>';
       $response .= '<Response>';
-      $response .= '<GetDigits timeout="30" finishOnKey="#" callbackUrl="http://173.212.225.164:8010/voice/ivr.php">';
+      $response .= '<GetDigits timeout="30" finishOnKey="#" callbackUrl="http://173.212.225.164:8010/voice/voiceIVR.php">';
       $response .= '<Say>'.$text.'</Say>';
       $response .= '</GetDigits>';
       $response .= '</Response>';
